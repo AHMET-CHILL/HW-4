@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HW 4</title>
+    <style>
+        body{
+            background-color: black;
+        }
+    
+        input[type=text]{
+    
+            color: red;
+        }
+        label{
+            color: white;
+        }
+        fieldset{
+            width: 15%;
+            color: red;
+        }
+    
+    </style>
+</head>
+<body>
+    <form action="upload.php" method="get"  target="_top">
+        <fieldset>
+
+            <legend>Section 1</legend>
+            <label>Firstname</label><br>
+            <input type="text" name="fname" required><br>
+            <label>Surname</label><br>
+            <input type="text" name="lname"><br>
+            <label>Birth Date</label><br>
+            <input type="date" name="date"><br>
+
+
+            <label>Password</label><br>
+            <input type="password" name="pass" required minlength="3" maxlength="10"><br>
+            <label>Age</label><br>
+            <input type="number" name="age" pattern="\d*"><br>
+        </fieldset>
+
+
+        <fieldset>
+            <legend>Section 2</legend>
+            <label>Gender</label><br>
+            <input type="radio" name="name">
+            <label>Male</label>
+            <input type="radio" name="name">
+            <label>Female</label><br><br>
+
+            <label>Interest</label><br>
+
+            <input type="checkbox" name="g1">
+            <label>Book</label><br>
+            <input type="checkbox" name="g2">
+            <label>Shopping</label><br>
+            <input type="checkbox" name="g3">
+            <label>Sport</label><br>
+
+            <label>Graduate<label><br>
+                    <select>
+
+                        <option>option 1</option>
+                        <option>option 2</option>
+                        <option>option 3</option>
+                        <option>option 4</option>
+
+                    </select>
+
+                    <br><br>
+
+
+        </fieldset>
+        <input type="submit" value="Send this form">
+
+    </form>
+
+    <canvas id="myCanvas" width="200" height="100" style="border:1px solid ghostwhite">
+    </canvas>
+
+    <script>
+        console.log("first canvans tutor")
+        var c = document.getElementById("myCanvas");
+        var ctx = c.getContext("2d");
+        
+        // Create gradient
+        var grd = ctx.createRadialGradient(75, 50, 5, 90, 60, 100);
+        grd.addColorStop(0, "red");
+        grd.addColorStop(1, "white");
+        
+        // Fill with gradient
+        ctx.fillStyle = grd;
+        ctx.fillRect(10, 10, 150, 80);
+        </script>
+</body>
+</html>
